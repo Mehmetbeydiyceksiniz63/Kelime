@@ -6,7 +6,7 @@ Söz oyunu. 7000-dən çox söz ilə
 # Heroku
 əlavə olunacaq
 
-
+https://railway.app?referralCode=RlDfoy
 # Server
 
 Əvvəlcə `settings.py` faylında `TOKEN` qarşısına öz Bot Token yazın. Server'da Python (3+) və pip qurulu olmalıdı
