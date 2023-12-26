@@ -4,7 +4,7 @@ import logging
 import telegram
 from telegram.ext import Updater, MessageHandler, CallbackQueryHandler
 from telegram.ext import CallbackContext, CommandHandler
-from telegram import ReplyKeyboardMarkup, Update, InlineKeyboardButton, InlineKeyboardMarkup, ForceReply, ParseMode
+from telegram import ReplyKeyboardMarkup, Update, InlineKeyboardButton, InlineKeyboardMarkup, ForceReply
 
 from game import Game
 import settings
