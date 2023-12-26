@@ -65,12 +65,6 @@ def button(update, context):
 
 def command_start(update, context: CallbackContext):
     if update.effective_chat.type == "private":
-        
-        addme = InlineKeyboardButton(text="🧚 Gruba Ekleyin!", url="https://t.me/sifirbiroyunBot?startgroup=a")
-        sohbet = InlineKeyboardButton(text="💬 Sohbet Grubumuz", url="https://t.me/S1F1RB1RSOHBET")
-        oyun = InlineKeyboardButton(text="👾 Arşiv Kanalımız", url="https://t.me/S1F1RB1RSOHBETT")
-        admin = InlineKeyboardButton(text="👨🏻‍💻 Sahip", url="https://t.me/Meyit47")
-
         keyboard = [[addme],[sohbet],[oyun],[admin]]
         reply_markup = InlineKeyboardMarkup(keyboard)
         update.message.reply_text('Özelde Oyun Olmaz 🇹🇷!', reply_to_message_id=True, reply_markup=reply_markup)
@@ -104,13 +98,13 @@ def set_master(update, context):
 
     game.set_master(update.message.from_user.id)
 
-    show_word_btn = InlineKeyboardButton("👻Söze bak", callback_data='show_word')
-    change_word_btn = InlineKeyboardButton("♻️Sözü değiştir", callback_data='change_word')
+    show_word_btn = InlineKeyboardButton("👁️‍🗨️ Kelimeye bak", callback_data='show_word')
+    change_word_btn = InlineKeyboardButton("♻️ Kelimeyi değiştir", callback_data='change_word')
 
     keyboard = [[show_word_btn], [change_word_btn]]
     reply_markup = InlineKeyboardMarkup(keyboard)
 
-    update.message.reply_text('[{}](tg://user?id={}) sözü başa alır'.format(username,user_id), reply_to_message_id=True, reply_markup=reply_markup, parse_mode=ParseMode.MARKDOWN)
+    update.message.reply_text('[{}](tg://user?id={}) Kelimeyi Buldu'.format(username,user_id), reply_to_message_id=True, reply_markup=reply_markup, parse_mode=ParseMode.MARKDOWN)
 
 
 def command_master(update: Update, context):
@@ -205,7 +199,7 @@ def is_word_answered(update, context):
     word = game.get_current_word()
 
     if game.is_word_answered(user_id, text):
-        update.message.reply_text('*{}* sözün [{}](tg://user?id={}) bulundu ✅'.format(word, username,user_id), reply_to_message_id=True, parse_mode=ParseMode.MARKDOWN)
+        update.message.reply_text('*{}* Kelimesini [{}](tg://user?id={}) buldu ✅'.format(word, username,user_id), reply_to_message_id=True, parse_mode=ParseMode.MARKDOWN)
 
         game.update_rating(user_id, username)
 
