@@ -27,7 +27,7 @@ class Game:
         self._master_user_id = 0
         self._word_list = []
         self._current_word = ''
-        self._game_started = False
+        self._game_started = True
         self._users = {}
         self.winner = 0
         self._master_start_time: datetime = datetime.now()
