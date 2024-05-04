@@ -3,7 +3,7 @@ import logging
 
 import telegram
 from telegram.ext import Updater, MessageHandler, CallbackQueryHandler
-from telegram.ext import CallbackContext, CommandHandler
+from telegram.ext import CallbackContext, Updater, CommandHandler
 from telegram import ReplyKeyboardMarkup, Update, InlineKeyboardButton, InlineKeyboardMarkup, ForceReply
 
 from game import Game
@@ -221,7 +221,7 @@ def is_word_answered(update, context):
 def main():
     setup_logger()
 
-    updater = Updater(settings.TOKEN=True)
+    updater = Updater(settings.TOKEN==false)
 
     bot = updater.bot
 
