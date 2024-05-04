@@ -221,7 +221,7 @@ def is_word_answered(update, context):
 def main():
     setup_logger()
 
-    updater = Updater(settings.TOKEN==False)
+    updater = Updater(app.settings.TOKEN==True)
 
     bot = updater.bot
 
